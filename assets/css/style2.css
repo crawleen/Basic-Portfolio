@@ -4,7 +4,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-image: url("../images/ep_naturalwhite.png");	
 }
 .content {
   flex: 1 0 auto;
@@ -29,11 +28,17 @@ body {
   	width:300px;
   	text-align: center;
 }
-.container{
+/*.container{
 	width:960px;
 	margin: 40px auto;
+}*/
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
 }
-.mainSection{
+/*.mainSection{
 	width:588px;
 	float: left;
 	background-color: #ffffff;
@@ -41,8 +46,18 @@ body {
 	border-color: #dddddd;
 	border-style: solid;
 	border-width: 1px;
+}*/
+.mainSection {
+  float: left;
+  width: 100%;
+  max-width: 650px;
+  padding: 30px;
+  margin: 0 0 40px;
+  background: #fff;
+	
+  border: 1px solid #ddd;
 }
-.sideBar{
+/*.sideBar{
 	width:228px;
 	float:right;
 	background-color: #ffffff;
@@ -50,7 +65,18 @@ body {
 	border-color: #dddddd;
 	border-style: solid;
 	border-width: 1px;
+}*/
+.sidebar {
+  float: right;
+  width: 100%;
+  max-width: 270px;
+  padding: 30px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+	
 }
+
 .menu{
 	margin-top:-60px;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -101,6 +127,9 @@ a{
 }
 .menu a:hover{
 	color:#4aaaa5;
+}
+body{
+	background-image: url("../images/ep_naturalwhite.png");	
 }
 .portfolioImage{
 	width:270px;
@@ -182,121 +211,64 @@ input:focus {
   outline-offset: 10px;
 }
 @media screen and (max-width: 980px) {
-	.top{
-		width:80%;
-	}
 	.mainSection{
-		margin-left:10%;
-		margin-right: 5%;
-		width: 39%
+		/*width: 60%*/
+		width:60%;
+		background-color: red;
 	}
 	.connectWithMe{
-		width: 25%;
-		margin-right: 5%;
+		width: 20%;
 	}
-	#me{
-		width:90%;
-		height:80%;
-		padding: 0% 5% 5% 5%;
-	}
-	.menu{
-		margin-right: -8%;
-	}
-	.leftPort,.rightPort{
-		float:none;
-		margin:0 10% 0 10%;
-	}
-	.portfolioImage{
-		width:100%;
-		height:80%;
-	}
-	.portBanner{
-		width:100%;		
-	}
-
 }
 
-@media only screen and (max-width: 768px) {
-	.top{
-		width:80%;
-	}
+@media screen and (max-width: 768px) {
 	.mainSection{
-		width: 55%;
+		width: 80%;
 		/*margin: auto;*/
 		margin-right:10%;
-		margin-left: 8%;
+		margin-left: 10%;
+		background-color: green;
 	}
 	.connectWithMe{
-		width: 57%;
-		margin:5% 0% 5% 8%;
-		float: left;
-	}
-	#me{
-		width:200px;
-		height:200px;
-		float:left;
-		padding: 15px;
-	}
-	.rightPort{
-		float:left;
-		margin:0;
-	}
-	.leftPort{
-		float:right;
-		margin:0;
-	}
-	.portfolioImage{
-		width:250px;
-		height:200px;
-	}
-}
-
-@media only screen and (max-width: 640px) {
-	.menu{
-		margin-top:0px;
-		float:none;
-		line-height: 60px;
-		text-align: center;
-		width:100%;
-	}
-	.menu a{
-		padding: 10%;
-	}
-	.nameLogo{
-		width:100%;
-		line-height: 60px;
-	}
-	.top{
-		width:100%;
-	}
-	.mainSection{
-		width: 50%;
-		margin-right:5%;
-		margin-left: 5%;		
-	}
-	.connectWithMe{
-		width: 52%;
+		width: 70%;
 		margin:40px 5% 40px	5%;
 		float: left;
 	}
+}
+
+@media screen and (max-width: 640px) {
+	/*.mainSection{
+		width: 50%;
+		margin-right:5%;
+		margin-left: 5%;
+	}*/
+	.mainSection {
+		width:100%;
+		/*float: left;*/
+		/*max-width: 640px;*/
+		/*padding: 30px;
+		margin: 0 0 40px;*/
+}
+	/*.connectWithMe{
+		width: 52%;
+		margin:40px 5% 40px	5%;
+		float: left;
+	}*/
+	.sidebar {
+  max-width: 270px;
+  padding: 30px;
+  margin-bottom: 20px;
+ }
 	#me{
 		width: 100%;
 		height: 100%;
+		/*margin-right:5%;
+		margin-left: 5%;*/
 	}
 	p{
 		width: 100%;
+		/*margin:40px 5% 40px	5%;*/
 		float: left;
 	}
-	.rightPort{
-		float:none;
-		margin:0;
-	}
-	.leftPort{
-		float:none;
-		margin:0;
-	}
-	.portfolioImage{
-		width:100%;
-		height:90%;
-	}
 }
+
